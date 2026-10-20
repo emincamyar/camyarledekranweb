@@ -12,7 +12,7 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://camyarled.com'),
+  metadataBase: new URL('https://camyarledekran.com'),
   title: {
     default: 'Çamyar LED Ekran Teknolojileri | Samsun & Karadeniz Endüstriyel LED Ekran Çözümleri',
     template: '%s | Çamyar LED Ekran Teknolojileri',
@@ -32,14 +32,14 @@ export const metadata: Metadata = {
     'huidu kontrol kartı samsun',
     'karadeniz led ekran montajı',
   ],
-  authors: [{ name: 'Çamyar LED Ekran Teknolojileri', url: 'https://camyarled.com' }],
+  authors: [{ name: 'Çamyar LED Ekran Teknolojileri', url: 'https://camyarledekran.com' }],
   creator: 'Çamyar LED Ekran Teknolojileri',
   publisher: 'Çamyar LED Ekran Teknolojileri',
   formatDetection: { email: false, address: false, telephone: false },
   openGraph: {
     type: 'website',
     locale: 'tr_TR',
-    url: 'https://camyarled.com',
+    url: 'https://camyarledekran.com',
     siteName: 'Çamyar LED Ekran Teknolojileri',
     title: 'Çamyar LED Ekran Teknolojileri | Samsun & Karadeniz Endüstriyel LED Ekran Çözümleri',
     description:
@@ -72,7 +72,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: 'https://camyarled.com',
+    canonical: 'https://camyarledekran.com',
   },
   category: 'technology',
   other: {
@@ -89,12 +89,12 @@ export const metadata: Metadata = {
 const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': ['LocalBusiness', 'ElectronicsStore'],
-  '@id': 'https://camyarled.com/#organization',
+  '@id': 'https://camyarledekran.com/#organization',
   name: 'Çamyar LED Ekran Teknolojileri',
   alternateName: ['Çamyar LED', 'Çamyar Mühendislik LED Sistemleri'],
   description:
     'Samsun İlkadım merkezli; P10 dış mekan LED paneller, ultra HD iç mekan video wall sistemleri, Novastar/Huidu kontrol kartları satışı, montajı ve teknik servisi.',
-  url: 'https://camyarled.com',
+  url: 'https://camyarledekran.com',
   telephone: '+90 546 240 90 77',
   email: 'bilgi@camyarelektrik.com',
   foundingDate: '2015',
