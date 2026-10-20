@@ -205,6 +205,18 @@ export default function AdminDashboardPage() {
       setShowProductModal(false)
       setEditingProductId(null)
       showToast('Ürün bilgileri ve görseli güncellendi, /urunler kataloğu anında senkronize edildi!')
+	// --- Örnek Senkronizasyon Fonksiyonu (Tüm Kaydetme İşlemlerinden Sonra Çalışacak) ---
+  const syncStoreToServer = async (newStoreData: typeof store) => {
+    try {
+      await fetch('/api/store', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(newStoreData),
+      })
+    } catch (err) {
+      console.error('Sunucu senkronizasyon hatası:', err)
+    }
+  }
       return
     }
 
@@ -349,6 +361,18 @@ export default function AdminDashboardPage() {
       contentBody: '',
     })
     showToast('Yeni makale yayınlandı ve /blog sayfasının en başına eklendi!')
+	// --- Örnek Senkronizasyon Fonksiyonu (Tüm Kaydetme İşlemlerinden Sonra Çalışacak) ---
+  const syncStoreToServer = async (newStoreData: typeof store) => {
+    try {
+      await fetch('/api/store', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(newStoreData),
+      })
+    } catch (err) {
+      console.error('Sunucu senkronizasyon hatası:', err)
+    }
+  }
   }
 
   const handleDeleteBlog = (slug: string) => {
@@ -357,6 +381,18 @@ export default function AdminDashboardPage() {
       blogs: prev.blogs.filter((b) => b.slug !== slug),
     }))
     showToast('Makale /blog sayfasından kaldırıldı.')
+	// --- Örnek Senkronizasyon Fonksiyonu (Tüm Kaydetme İşlemlerinden Sonra Çalışacak) ---
+  const syncStoreToServer = async (newStoreData: typeof store) => {
+    try {
+      await fetch('/api/store', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(newStoreData),
+      })
+    } catch (err) {
+      console.error('Sunucu senkronizasyon hatası:', err)
+    }
+  }
   }
 
   // --- Project Handlers ---
@@ -395,6 +431,18 @@ export default function AdminDashboardPage() {
       status: 'Tamamlandı',
     })
     showToast('Yeni referans proje eklendi ve /referanslar sayfasında yayınlandı!')
+	// --- Örnek Senkronizasyon Fonksiyonu (Tüm Kaydetme İşlemlerinden Sonra Çalışacak) ---
+  const syncStoreToServer = async (newStoreData: typeof store) => {
+    try {
+      await fetch('/api/store', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(newStoreData),
+      })
+    } catch (err) {
+      console.error('Sunucu senkronizasyon hatası:', err)
+    }
+  }
   }
 
   const handleDeleteProject = (id: string) => {
@@ -403,17 +451,53 @@ export default function AdminDashboardPage() {
       projects: prev.projects.filter((p) => p.id !== id),
     }))
     showToast('Referans proje /referanslar listesinden silindi.')
+// --- Örnek Senkronizasyon Fonksiyonu (Tüm Kaydetme İşlemlerinden Sonra Çalışacak) ---
+  const syncStoreToServer = async (newStoreData: typeof store) => {
+    try {
+      await fetch('/api/store', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(newStoreData),
+      })
+    } catch (err) {
+      console.error('Sunucu senkronizasyon hatası:', err)
+    }
+  }
   }
 
   // --- Lead (CRM) Handlers ---
   const handleDeleteLead = (id: string) => {
     deleteLead(id)
     showToast('Müşteri başvurusu kalıcı olarak silindi.')
+	// --- Örnek Senkronizasyon Fonksiyonu (Tüm Kaydetme İşlemlerinden Sonra Çalışacak) ---
+  const syncStoreToServer = async (newStoreData: typeof store) => {
+    try {
+      await fetch('/api/store', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(newStoreData),
+      })
+    } catch (err) {
+      console.error('Sunucu senkronizasyon hatası:', err)
+    }
+  }
   }
 
   const handleArchiveLead = (id: string) => {
     archiveLead(id)
     showToast('Müşteri başvurusu arşiv durumu güncellendi.')
+	// --- Örnek Senkronizasyon Fonksiyonu (Tüm Kaydetme İşlemlerinden Sonra Çalışacak) ---
+  const syncStoreToServer = async (newStoreData: typeof store) => {
+    try {
+      await fetch('/api/store', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(newStoreData),
+      })
+    } catch (err) {
+      console.error('Sunucu senkronizasyon hatası:', err)
+    }
+  }
   }
 
   // --- Software & Program Handlers ---
@@ -478,6 +562,18 @@ export default function AdminDashboardPage() {
       setShowSoftwareModal(false)
       setEditingSoftwareId(null)
       showToast('Yazılım bilgileri ve indirme bağlantısı güncellendi (/program-indir ile senkron)!')
+	// --- Örnek Senkronizasyon Fonksiyonu (Tüm Kaydetme İşlemlerinden Sonra Çalışacak) ---
+  const syncStoreToServer = async (newStoreData: typeof store) => {
+    try {
+      await fetch('/api/store', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(newStoreData),
+      })
+    } catch (err) {
+      console.error('Sunucu senkronizasyon hatası:', err)
+    }
+  }
       return
     }
 
@@ -513,6 +609,18 @@ export default function AdminDashboardPage() {
     }))
     setShowSoftwareModal(false)
     showToast('Yeni yazılım eklendi ve /program-indir sayfasında yayınlandı!')
+	// --- Örnek Senkronizasyon Fonksiyonu (Tüm Kaydetme İşlemlerinden Sonra Çalışacak) ---
+  const syncStoreToServer = async (newStoreData: typeof store) => {
+    try {
+      await fetch('/api/store', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(newStoreData),
+      })
+    } catch (err) {
+      console.error('Sunucu senkronizasyon hatası:', err)
+    }
+  }
   }
 
   const handleQuickUpdateSoftwareLink = (id: string, newLink: string) => {
@@ -523,6 +631,18 @@ export default function AdminDashboardPage() {
       ),
     }))
     showToast('İndirme bağlantısı (.exe/.zip) anında güncellendi!')
+	// --- Örnek Senkronizasyon Fonksiyonu (Tüm Kaydetme İşlemlerinden Sonra Çalışacak) ---
+  const syncStoreToServer = async (newStoreData: typeof store) => {
+    try {
+      await fetch('/api/store', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(newStoreData),
+      })
+    } catch (err) {
+      console.error('Sunucu senkronizasyon hatası:', err)
+    }
+  }
   }
 
   const handleDeleteSoftware = (id: string) => {
@@ -531,6 +651,18 @@ export default function AdminDashboardPage() {
       softwares: (prev.softwares || []).filter((sw) => sw.id !== id),
     }))
     showToast('Yazılım /program-indir listesinden kaldırıldı.')
+	// --- Örnek Senkronizasyon Fonksiyonu (Tüm Kaydetme İşlemlerinden Sonra Çalışacak) ---
+  const syncStoreToServer = async (newStoreData: typeof store) => {
+    try {
+      await fetch('/api/store', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(newStoreData),
+      })
+    } catch (err) {
+      console.error('Sunucu senkronizasyon hatası:', err)
+    }
+  }
   }
 
   // Filtered queries
@@ -828,6 +960,18 @@ export default function AdminDashboardPage() {
                 onClick={() => {
                   resetStore()
                   showToast('Tüm veriler varsayılan fabrika ayarlarına sıfırlandı.')
+		// --- Örnek Senkronizasyon Fonksiyonu (Tüm Kaydetme İşlemlerinden Sonra Çalışacak) ---
+  const syncStoreToServer = async (newStoreData: typeof store) => {
+    try {
+      await fetch('/api/store', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(newStoreData),
+      })
+    } catch (err) {
+      console.error('Sunucu senkronizasyon hatası:', err)
+    }
+  }
                 }}
                 className="w-full text-center py-1.5 rounded-lg text-[11px] font-semibold text-slate-400 hover:text-slate-700 hover:bg-slate-50 transition-colors cursor-pointer"
               >
