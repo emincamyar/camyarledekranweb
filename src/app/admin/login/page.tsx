@@ -218,27 +218,7 @@ export default function AdminLoginPage() {
               </button>
             </form>
 
-            {/* Quick Demo Credentials Box */}
-            <div className="mt-8 pt-6 border-t border-slate-100 bg-slate-50 rounded-2xl p-4 text-center">
-              <div className="text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-2">
-                Varsayılan Yönetici Bilgileri
-              </div>
-              <div className="flex items-center justify-center gap-4 text-xs font-mono text-slate-700 mb-3">
-                <span>Kullanıcı: <strong className="text-[#292c64]">admin</strong></span>
-                <span>•</span>
-                <span>Şifre: <strong className="text-[#292c64]">camyar2026!</strong></span>
-              </div>
-              <button
-                type="button"
-                onClick={fillDemoCredentials}
-                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white border border-slate-200 text-xs font-semibold text-[#292c64] hover:border-[#70b62c] hover:text-[#70b62c] transition-colors shadow-xs cursor-pointer"
-              >
-                <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
-                <span>Giriş Bilgilerini Otomatik Doldur</span>
-              </button>
-            </div>
+            
           </div>
         </div>
 
